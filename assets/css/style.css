@@ -1,5 +1,37 @@
 /*style.css*/
 
+:root {
+    --primary-color: #707070;
+    --secondary-color: #87C563;
+    --tertiary-color: #EDE7E7;
+}
+
+.pure-menu-link {
+    color: black;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 5rem;
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+header h1 {
+    width: 25%;
+    padding-left: 20px;
+    
+}
+
+header div {
+    justify-content: end;
+    width: 25%;
+}
+
 .title {
     text-align: center;
 }
@@ -10,7 +42,13 @@
 
 .footer {
     position: absolute;
-    bottom: 5rem;
     width: 100%;
     height: auto;
+    bottom: 0;
+    background-color: var(--secondary-color);
+}
+
+.ftl {
+    
+    right: 0;
 }

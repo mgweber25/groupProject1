@@ -11,6 +11,10 @@
 }
 
 
+.pure-button {
+    background-color: var(--secondary-color);
+}
+
 header {
     display: flex;
     align-items: center;
@@ -52,3 +56,4 @@ header div {
     
     right: 0;
 }
+

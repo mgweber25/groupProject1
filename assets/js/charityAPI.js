@@ -1,35 +1,48 @@
 //CharityAPI.js
 
-/*
-q=delta%20alpha%20%2Bevanston (delta alpha +evanston)
-
-
-// ntee%5Bid%5D=7) = c_code[id] = Human Services # 5  */
-
-
-//ntee%5Bid%5D=5%2B
-
 function findCharities() {
-    var city = document.getElementById("#zipcode");
+    
+    var cityInput = document.querySelector("#city").value;
 
-    var state = document.getElementById("#state");
+    var stateInput = document.querySelector("#state").value;
 
-fetch("https://projects.propublica.org/nonprofits/api/v2/search.json?q=" + city + "&ntee%5Bid%5D=5&" + "state%5bid%5d=" + state.toUpperCase())
+    state = stateInput.toUpperCase();
+
+
+
+fetch(
+"https://projects.propublica.org/nonprofits/api/v2/search.json?q=" + cityInput + "&ntee%5Bid%5D=5&state%5bid%5d=" + stateInput)
 
   .then(function(response) {
+
     return response.json();
   })
 
   .then(function(response) {
 
-    console.log(response.data[0]);
+    console.log(response.organizations);
 
-var charityList = charityList.query.random[0].title;
+//var charityList = charityList.query.random[0].title;
 
 var responseHeaderEl = document.querySelector("#charity-form");
 
-      responseHeaderEl.innerHTML = '<h2>' + zipCode + '</h2>';
+var responseContainerEl = document.querySelector("#charity-form");
 
-    //  return fetch('https://projects.propublica.org/nonprofits/api/v2/search?q=ntee%5Bid%5D=5%2B' + zipCode);
+      responseHeaderEl.innerHTML = ("<h2>" + cityInput +", " + stateInput + "</h2>");
+
+      for(i = 0; i < response.length; i++) {
+
+        responseContainerEl = ("<h4>" + organizations[i].querySelector("#response-container").value + "</h4>");
+      }
+
   });
 };
+
+
+
+
+// https://projects.propublica.org/nonprofits/api/v2/search.json?q=brooklyn&ntee%5Bid%5D=5&state%5bid%5d=NY
+
+// https://projects.propublica.org/nonprofits/api/v2/search.json?q=Milwaukee&ntee%5Bid%5D=5&state%5bid%5d=WI
+
+//"#city", "#state"

@@ -42,50 +42,45 @@
                 <h2>Please fill out this form to show restaurants in your area!</h2>
                 <form class="pure-form" id="charity-form">
                     <fieldset>
-                        <div class="pure-control-group">
+                        <!--<div class="pure-control-group">
                             <label for="charity-name">Charity Name</label>
                             <input type="text" id="charity-name" placeholder="Charity">
                             <span class="pure-form-message-inline">This is a required field.</span>
+                        </div>-->
+                        <div class="pure-control-group">
+                            <label for="city">Your City</label>
+                            <input type="text" id="city" placeholder="City">
+                            <span class="pure-form-message-inline">Please enter your city.</span>
                         </div>
                         <div class="pure-control-group">
-                            <label for="zipcode">Your Zipcode</label>
-                            <input type="text" id="zipcode" placeholder="Zipcode">
-                            <span class="pure-form-message-inline">This is a required field.</span>
+                            <label for="state">Your State</label>
+                            <input type="text" id="state" placeholder="State" maxlength="2">
+                            <span class="pure-form-message-inline">Please enter two letter state.</span>
                         </div>
                         <div class="pure-controls">
                             <label for="aligned-cb" class="pure-checkbox">
-                            <input type="checkbox" id="aligned-cb" /> I&#x27;ve read the terms and conditions</label>
-                            <button onclick="findZipCode()" type="submit" class="pure-button pure-button-primary pure-button-active">Submit</button>
+                            <input type="checkbox" id="aligned-cb" /> I've read the terms and conditions</label>
+                            <input type="button" onclick="findCharities('#city', '#state')" value="Submit">Submit</button>
+                            <div id="response-container"></div>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </main>
         <footer class="footer">
-            <div class="pure-menu pure-menu-horizontal title">
-                <a href="index.html" class="pure-menu-heading pure-menu-link">Home</a>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item">
-                        <a href="charity.html" class="pure-menu-link">Charities</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a href="restaurant.html" class="pure-menu-link">Restaurants</a>
-                    </li>
-                    <!-- <li class="pure-menu-item">
-                        <a href="charity.html" class="pure-menu-link">Privacy Policy</a>
-                    </li> -->
-                </ul>
+            <div class="pure-menu pure-menu-horizontal">
+                <a href="index.html" class="pure-menu-heading pure-menu-link ftl">Privacy Policy</a>
             </div>
         </footer>
       
-
+  <!--button      class="pure-button pure-button-active" -->
 
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="" async defer></script>
+        <script src="./assets/js/charityAPI.js"></script>
 
 
 

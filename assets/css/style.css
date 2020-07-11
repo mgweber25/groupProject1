@@ -14,3 +14,8 @@
     width: 100%;
     height: auto;
 }
+
+.rest-list {
+    font-size: 1rem;
+    color: blue;
+}

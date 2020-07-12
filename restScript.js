@@ -1,7 +1,7 @@
 
 
 var zipCodeEl = document.querySelector("#zipcode");
-var submitButtonEl = document.querySelector("#submit-button");
+var submitButtonEl = document.querySelector("#submit-button-charity");
 var restResultsEl = document.querySelector("#rest-results");
 
 var getRestData = function(zip) {

@@ -17,9 +17,8 @@ function findCharities() {
 
     //Add CORS proxy
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = "https://projects.propublica.org/nonprofits/api/v2/search.json?q=chicago&ntee%5Bid%5D=5&state%5bid%5d=IL"
-    /*"https://projects.propublica.org/nonprofits/search?utf8=%E2%9C%93&adv_search=1&q_all=&q_phrase=&q_any=&q_none=&city=" + cityInput + "&state%5Bid%5D=" + stateInput; */
-    
+    const url = "https://projects.propublica.org/nonprofits/api/v2/search.json?q=" + city + "&ntee%5Bid%5D=5&state%5bid%5d=" + state;
+       
     fetch(proxyurl + url)
     
     .then(function(response) {
@@ -33,19 +32,29 @@ function findCharities() {
 
                 console.log(charityArr);
                 if (charityArr.length === 0) {
-                    charityResultsEl.textContent = "No charities listed for that zip code.";
+                    charityResultsEl.textContent = "No charities listed for that city & state.";
                     return;
                 }
+
+                //var responseHeaderEl = document("#charity-form");
+        
+                //document.write(responseHeaderEl) // = ("<h2>" + city + ", " + state + "</h2>");
+
+
                 //charityResultsEl.textContent = "";
                 for (i=0; i<charityArr.length; i++) {
-                    var charityInfo = charityArr[i].name + "/" + charityArr[i].city + "/" + charityArr[i].state; /*+ charityArr[i].zipcode;*/
+
+                    var charityInfo = charityArr[i].name + " / " + charityArr[i].city + " / " + charityArr[i].state; /*+ charityArr[i].zipcode;*/
+
                     console.log(charityInfo);
                     
                     var charityList = document.createElement("p");
-                    charityList.classList = "charity-list";
-                    charityList.textContent = charityInfo;
-                    //charityResultsEl.appendChild(charityList);
-                    document.innerHTML("<p>" + charityArr[i].name + "</p>")
+                    //charityList.classList = "charity-list";
+                    charityList.innerHTML = charityInfo;
+                    document.body.appendChild(charityList);
+                    //charityList.textContent = charityInfo;
+                    //charityList.appendChild([charityArr[i].name, charityArr[i].city, charityArr[i].state]);
+                    //document.write(["<p>" + charityArr[i].name, charityArr[i].city, charityArr[i].state + "<p>"])
                 }    
             
         })
@@ -55,17 +64,20 @@ function findCharities() {
 
                 }
             })
-        
-            
-        .then(function(response) {
+        };
 
-            console.log(response);
+            
+      //  "<p>" + 
+
+     //   .then(function(response) {
+
+       //     console.log(response);
         
         //var charityList = charityList.query.random[0].title;
         
-        var responseHeaderEl = document.querySelector("#charity-form");
+        //var responseHeaderEl = document.querySelector("#charity-form");
         
-              responseHeaderEl.innerHTML = ("<h2>" + city + ", " + state + "</h2>");
+          //    responseHeaderEl.innerHTML = ("<h2>" + city + ", " + state + "</h2>");
         
         /*      for(i = 0; i < charityArr.length; i++) {
 
@@ -76,8 +88,8 @@ function findCharities() {
              // function displayCharities() {
                 
      //   }
-    });
-};
+   // });
+
 
 
   

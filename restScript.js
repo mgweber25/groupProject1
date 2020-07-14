@@ -42,10 +42,10 @@ var displayRest = function(rest, restaurants) {
     }
     restResultsEl.textContent = "";
     for (i=0; i<restArr.length; i++) {
-        var restInfo = restArr[i].name + "/" + restArr[i].address + "/" + restArr[i].city + restArr[i].area + "/" + restArr[i].phone;
+        var restInfo = restArr[i].name + " - " + restArr[i].address + " - " + restArr[i].city + restArr[i].area + " - " + restArr[i].phone;
         console.log(restInfo);
-        var restList = document.createElement("li");
-        restList.classList = "rest-list";
+        var restList = document.createElement("p");
+        restList.classList = "rest-list pure-u-1-" + restArr.length;
         restList.textContent = restInfo;
         restResultsEl.appendChild(restList);
 

@@ -64,16 +64,18 @@ header div {
 
 .pure-g {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: wrap;
+    align-items: flex-start;
 }
 .landing {
     text-align: center;
     background-image: url("../images//variety-of-vegetables-1400172.jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-content: wrap;
-    align-items: flex-start;
+    
+    
     background-attachment: fixed;
     background-position: 80%;
 }
@@ -141,6 +143,17 @@ main h3 {
     padding: 25px;
 }
 
+main p {
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    color: var(--tertiary-color);
+    font-size: 25px;
+    padding: 0 15px;
+}
+
 .pure-form {
     color: black;
     background-color:#87c56383;
@@ -176,9 +189,16 @@ main h3 {
     align-content: wrap;
     align-items: flex-start;
     border: solid 3px var(--secondary-color);
-    /* width: 30%; */
+    width: 35%;
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
+}
+
+.panel {
+    text-decoration: none;
+    background-color: rgba(237, 231, 231, 0.7);
+    color: black;
+    border: none;
 }
 

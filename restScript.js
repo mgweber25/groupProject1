@@ -19,6 +19,7 @@ var getRestData = function(zip) {
 };
 
 var formSubmitHandler = function(event) {
+    //debugger;
     event.preventDefault();
     var userZip = zipCodeEl.value.trim();
     console.log(zipCodeEl.value);
@@ -34,6 +35,7 @@ var formSubmitHandler = function(event) {
 submitButtonEl.addEventListener("click", formSubmitHandler);
 
 var displayRest = function(rest, restaurants) {
+    debugger;
     var restArr = rest.restaurants;
     console.log(restArr);
     if (restArr.length === 0) {

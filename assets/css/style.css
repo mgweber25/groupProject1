@@ -6,6 +6,10 @@
     --tertiary-color: #EDE7E7;
 }
 
+.pure-g {
+    letter-spacing: normal;
+}
+
 body {
     color:  black;
      font-family: Helvetica, Arial, sans-serif;
@@ -62,13 +66,14 @@ header div {
     margin: 0;
 }
 
-.pure-g {
+.flex {
     text-align: center;
     display: flex;
     justify-content: center;
     align-content: wrap;
     align-items: flex-start;
 }
+
 .landing {
     text-align: center;
     background-image: url("../images//variety-of-vegetables-1400172.jpg");
@@ -180,7 +185,7 @@ main p {
 }
 
 .rest-list {
-    /* display: inline-block; */
+    display: inline-block;
     font-size: 1rem;
     color: black;
     text-align: center;
@@ -193,6 +198,10 @@ main p {
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
+}
+
+.rest-list p {
+    width: 100%;
 }
 
 .panel {

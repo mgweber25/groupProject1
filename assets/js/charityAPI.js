@@ -1,7 +1,5 @@
 //CharityAPI.js
 
-
-
 function findCharities() {
     
     var cityInput = document.querySelector("#city").value;
@@ -12,7 +10,7 @@ function findCharities() {
     
     state = stateInput.toUpperCase();
 
-    charityResultsEl = document.querySelector("#charity-results");
+    charityResultsEl = document.querySelector("#charity-list");
 
 
     //Add CORS proxy
@@ -26,15 +24,64 @@ function findCharities() {
         if (response.ok) {
             console.log(response);
             return response.json().then(function(data) {
-                //console.log(data)
+                
+              var charityArr = data.organizations;
+             
+              var printArr = function(charityList) {
+                var li = document.createElement("charity-results");
+                li.textContent = charityList;
+                charityResultsEl.appendChild(li);
+              };
 
-                var charityArr = data.organizations;
 
-                console.log(charityArr);
-                if (charityArr.length === 0) {
+              console.log(data)
+
+
+                for (i=0; i < charityArr.length; i++) {
+
+                  if (charityArr.length === 0) {
                     charityResultsEl.textContent = "No charities listed for that city & state.";
                     return;
-                }
+                  }
+                  
+
+                  var charityInfo = charityArr[i].name + " / " + charityArr[i].city + " / " + charityArr[i].state; 
+                    
+                    console.log(charityArr[i].city);
+                    console.log(charityInfo);
+                    
+                    const charityList = document.createElement("p");
+                    
+                    charityList.innerHTML = charityInfo;
+                    document.body.appendChild(charityList);
+
+                    if(city === this.city) {
+                  
+                    charityList.classList = "charity-list";
+
+                    charityList.textContent = charityInfo;
+                   // charityList.appendChild([charityArr[i].name, charityArr[i].city, charityArr[i].state]);  
+
+                    printArr(charityList);
+                    }
+                    else {
+                      return;
+                    }
+                  }
+                   
+            })
+
+          }
+          });
+
+}
+      
+
+
+    //   else {
+    //     alert("Error: " + response.statusText);
+
+    // }
 
                 //var responseHeaderEl = document("#charity-form");
         
@@ -42,32 +89,16 @@ function findCharities() {
 
 
                 //charityResultsEl.textContent = "";
-                for (i=0; i<charityArr.length; i++) {
 
-                    var charityInfo = charityArr[i].name + " / " + charityArr[i].city + " / " + charityArr[i].state; /*+ charityArr[i].zipcode;*/
+    /*+ charityArr[i].zipcode;*/        
 
-                    console.log(charityInfo);
-                    
-                    var charityList = document.createElement("p");
-                    //charityList.classList = "charity-list";
-                    charityList.innerHTML = charityInfo;
-                    document.body.appendChild(charityList);
-                    //charityList.textContent = charityInfo;
+//charityList.classList = "charity-list";
+
+  //charityList.textContent = charityInfo;
                     //charityList.appendChild([charityArr[i].name, charityArr[i].city, charityArr[i].state]);
                     //document.write(["<p>" + charityArr[i].name, charityArr[i].city, charityArr[i].state + "<p>"])
-                }    
-            
-        })
-    }
-        else {
-                    alert("Error: " + response.statusText);
-
-                }
-            })
-        };
-
-            
       //  "<p>" + 
+
 
      //   .then(function(response) {
 
@@ -88,33 +119,4 @@ function findCharities() {
              // function displayCharities() {
                 
      //   }
-   // });
-
-
-
   
-
-
-//https://projects.propublica.org/nonprofits/api/v2/search.json?=1&state%5Bid%5D=IL&ntee%5Bid%5D=5&city=chicago
-
-//https://projects.propublica.org/nonprofits/api/v2/search.json?q=&city=chicago&ntee%5Bid%5D=5&state%5bid%5d=IL
-
-
-  //  https://projects.propublica.org/nonprofits/search?utf8=%E2%9C%93&adv_search=1&q_all=&q_phrase=&q_any=&q_none=&city=chicago&state%5Bid%5D=IL&ntee%5Bid%5D=5&c_code%5Bid%5D=
-
-
-  //https://projects.propublica.org/nonprofits/api/v2/search.json?q=&city=chicago&ntee%5Bid%5D=1&state%5Bid%5D=IL
-
-
-//https://projects.propublica.org/nonprofits/api/v2/search.json?q=5&state%5bid%5d=IL&ntee%5Bid%5D=&city=chicago
-  
-  
-
-//https://projects.propublica.org/nonprofits/api/v2/search.json?q=&state%5Bid%5D=IL&ntee%5Bid%5D=&city=chicago
-
-//https://projects.propublica.org/nonprofits/api/v2/search.json?q=&city=brooklyn&ntee%5Bid%5D=5&state%5bid%5d=NY
-
-//https://projects.propublica.org/nonprofits/api/v2/search.json?q=1&state%5Bid%5D=IL&ntee%5Bid%5D=5&c_code%5Bid%5D=&city=chicago
-
-  /*   
-  search?utf8=%E2%9C%93&adv_search=1&state%5Bid%5D=IL&ntee%5Bid%5D=5&c_code%5Bid%5D=&q_all=&q_phrase=&q_any=&q_none=&city=chicago */

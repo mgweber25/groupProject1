@@ -42,7 +42,7 @@ var displayRest = function(rest, restaurants) {
     }
     restResultsEl.textContent = "";
     for (i=0; i<restArr.length; i++) {
-        var restInfo = "<p>" + restArr[i].name + " - " + restArr[i].address + " - " + restArr[i].city + restArr[i].area + " - " + restArr[i].phone + "</p>";
+        var restInfo = "<p>" + restArr[i].name + " - " + restArr[i].address + " - " + restArr[i].city + ", " + restArr[i].area + " - " + restArr[i].phone + "</p>";
         console.log(restInfo);
         var restList = document.createElement("div");
         restList.classList = "rest-list pure-u-1-" + restArr.length;

@@ -47,7 +47,7 @@ function findCharities() {
 
                   var charityInfo = charityArr[i].name + " / " + charityArr[i].city + " / " + charityArr[i].state; 
                     
-                    console.log(charityArr[i].city);
+                    //console.log(charityArr[i].city);
                     console.log(charityInfo);
                     
                     const charityList = document.createElement("p");

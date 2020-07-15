@@ -127,6 +127,7 @@ main h2  {
     font-size: 48px;
     margin: 50px;
     padding: 50px;
+    text-align: left;
 }
 
 main h3 {
@@ -151,7 +152,6 @@ main h3 {
     align-content: wrap;
     align-items: flex-start;
     border: solid 3px var(--secondary-color);
-    width: 30%;
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
@@ -159,6 +159,10 @@ main h3 {
 
 .pure-form button:hover {
     background-color: var(--primary-color);  
+}
+
+.pure-form-message-inline {
+color: black;
 }
 .footer {
     position: absolute;
@@ -169,16 +173,19 @@ main h3 {
 .rest-list {
     /* display: inline-block; */
     font-size: 1rem;
-    color: black;
+    color:white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-content: wrap;
     align-items: flex-start;
     border: solid 3px var(--secondary-color);
-    /* width: 30%; */
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     border-radius: 15px;
+}
+
+.rest-list li {
+    background-color: var(--primary-color);
 }
 

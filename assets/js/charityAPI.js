@@ -42,10 +42,10 @@ var displayCharity = function(orginizations, city) {
       return;
     }
   for (i=0; i<charityArr.length; i++) {
-    var charityListInfo = charityArr[i].charityName + "/" + charityArr[i].charityNavigatorURL + "/" + charityArr[i].mailingAddress.streetAddress1 + "/" + charityArr[i].mailingAddress.city + "/" + charityArr[i].mailingAddress.stateOrProvince + "/" + charityArr[i].mailingAddress.postalCode;
-    var charityDisplayLi = document.createElement("li");
-      charityDisplayLi.classList = "charity-list";
-      charityDisplayLi.textContent = charityListInfo;
+    var charityListInfo = "<p>" + charityArr[i].charityName + " - " + "<a href='" + charityArr[i].charityNavigatorURL + "' target=_'blank'>Website</a>" + " - " + charityArr[i].mailingAddress.streetAddress1 + ", " + charityArr[i].mailingAddress.city + ", " + charityArr[i].mailingAddress.stateOrProvince + " - " + charityArr[i].mailingAddress.postalCode + "</p>";
+    var charityDisplayLi = document.createElement("div");
+      charityDisplayLi.classList = "rest-list pure-u-1-" +charityArr.length;
+      charityDisplayLi.innerHTML = charityListInfo;
       charityResultsEl.appendChild(charityDisplayLi);
   };
   

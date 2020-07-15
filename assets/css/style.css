@@ -6,13 +6,31 @@
     --tertiary-color: #EDE7E7;
 }
 
+.pure-g {
+    letter-spacing: normal;
+}
+
+body {
+    color:  black;
+     font-family: Helvetica, Arial, sans-serif;
+   }
+.pure-menu {
+    border-right: thick;
+    border-color:  var(--secondary-color);   
+}
 .pure-menu-link {
     color: black;
 }
 
-
 .pure-button {
     background-color: var(--secondary-color);
+    border: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    opacity: 90%;
+    margin: 25px;
+    padding: 25px;
 }
 
 header {
@@ -21,8 +39,7 @@ header {
     justify-content: space-around;
     flex-direction: row;
     height: 5rem;
-    background-color: var(--secondary-color);
-    color: black;
+    background-color: var(--tertiary-color);
 }
 
 header h1 {
@@ -34,16 +51,133 @@ header h1 {
 header div {
     justify-content: end;
     width: 25%;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
 }
 
 .title {
     text-align: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
 }
 
-.pure-g {
+.flex {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: wrap;
+    align-items: flex-start;
 }
 
+.landing {
+    text-align: center;
+    background-image: url("../images//variety-of-vegetables-1400172.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+.restaurant-page {
+    text-align: center;
+    background-image: url("../images/abstract-art-cooking-cutlery-262896.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+.charity-page {
+    text-align: center;
+    background-image: url("../images/green-grapes-on-white-surface-3987401\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+/* .pure-g::after {
+    content: "";
+    background-image: url("../images//variety-of-vegetables-1400172.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+} */
+.layer {
+    background-color: #87c56338;
+}
+
+main h2  {
+    line-height: 1.2;
+    font-weight: 900;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    font-size: 48px;
+    margin: 50px;
+    padding: 50px;
+}
+
+main h3 {
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    color: var(--tertiary-color);
+    font-size: 30px;
+    margin: 25px;
+    padding: 25px;
+}
+
+main p {
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    color: var(--tertiary-color);
+    font-size: 25px;
+    padding: 0 15px;
+}
+
+.pure-form {
+    color: black;
+    background-color:#87c56383;
+    padding: 20px;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-content: wrap;
+    align-items: flex-start;
+    border: solid 3px var(--secondary-color);
+    width: 30%;
+    margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+.pure-form button:hover {
+    background-color: var(--primary-color);  
+}
 .footer {
     position: absolute;
     width: 100%;
@@ -51,6 +185,29 @@ header div {
 }
 
 .rest-list {
+    display: inline-block;
     font-size: 1rem;
-    color: blue;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: wrap;
+    align-items: flex-start;
+    border: solid 3px var(--secondary-color);
+    width: 35%;
+    margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
 }
+
+.rest-list p {
+    width: 100%;
+}
+
+.panel {
+    text-decoration: none;
+    background-color: rgba(237, 231, 231, 0.7);
+    color: black;
+    border: none;
+}
+

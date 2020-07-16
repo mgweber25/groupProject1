@@ -392,6 +392,12 @@ color: black;
     div.content-wrapper {
         position: relative;
     }
+
+    .privacy {
+        margin: 40px 0 0 0;
+        vertical-align: middle;
+        height: 200px;
+    }
     /* We can align the menu header to the left, but float the
     menu items to the right. */
     .home-menu {

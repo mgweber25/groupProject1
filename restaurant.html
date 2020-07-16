@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>groupProject1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed title">
+                <img src="./assets/images/iconfinder_green_curry_3377058.png" alt="The Donation Network Logo" width="80" height="80" class="logo pure-menu-heading">
+                <a href="index.html" class="pure-menu-title pure-menu-item pure-menu-link">The Donation Network</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="charity.html" class="pure-menu-link">Find Restaurant</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="restaurant.html" class="pure-menu-link">Find Charity</a>
+                    </li>
+                    <!-- <li class="pure-menu-item">
+                        <a href="charity.html" class="pure-menu-link">Privacy Policy</a>
+                    </li> -->
+                </ul>
+            </div>
+        </header>
+        <main class="pure-g restaurant-page">
+            <div class="pure-u-1-2">
+                <h2>Please fill out this form to show charities in your area!</h2>
+                <form class="pure-form" id="restaurant-form">
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="restaurant-name">Restuarant Name</label>
+                            <input type="text" id="restaurant-name" placeholder="Restaurant">
+                            <span class="pure-form-message-inline">This is a required field.</span>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="city">Your City</label>
+                            <input type="text" id="city" placeholder="City">
+                            <span class="pure-form-message-inline">This is a required field.</span>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="state">Your State</label>
+                            <input type="text" id="state" placeholder="WI" maxlength="2">
+                            <span class="pure-form-message-inline">This is a required field.</span>
+                        </div>
+                        <div class="pure-controls">
+                            <label for="aligned-cb" class="pure-checkbox">
+                            <input type="checkbox" id="aligned-cb" /> I&#x27;ve read the terms and conditions</label>
+                            <button type="submit" class="pure-button pure-button-active" id="submit-button-restaurant">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+           <div id="restaurant-display" class="pure-u-1-2 rest-results"></div>
+        </main>
+        
+
+        </section>
+        <footer class="footer">
+            <div class="pure-menu pure-menu-horizontal">
+                <a href="privacy.html" class="pure-menu-heading pure-menu-link ftl">Privacy Policy</a>
+            </div>
+        </footer>
+        
+
+       
+
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+        <script src="assets/js/charityAPI.js"></script>
+        
+
+    </body>
+</html>

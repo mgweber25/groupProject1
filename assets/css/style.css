@@ -71,12 +71,15 @@ body {
 .pure-button {
     background-color: var(--secondary-color);
     border: black;
-    padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
     opacity: 90%;
     margin: 25px;
     padding: 25px;
+    width: 75%
+}
+.tag1 {
+
 }
 
 /* header {
@@ -156,7 +159,7 @@ header div {
     top: 0;
     left: 0;
     position: fixed;
-    height: 120%;
+    height: 1019px;
 }
 
 .restaurant-page {
@@ -184,6 +187,9 @@ header div {
     background-attachment: fixed;
     background-position: 80%;
 }
+/* .divide {
+    height: 120%;
+} */
 /* .pure-g::after {
     content: "";
     background-image: url("../images//variety-of-vegetables-1400172.jpg");
@@ -205,8 +211,8 @@ main h2  {
     font-weight: 900;
     max-width: 100%;
     width: auto;
-    display: inline-block;
-    font-size: 48px;
+    /* display: inline-block; */
+    font-size: 40px;
     margin: 100px 50px 0px 50px;
     padding: 50px;
     text-align: left;
@@ -219,7 +225,7 @@ main h3 {
     width: auto;
     display: inline-block;
     color: var(--tertiary-color);
-    font-size: 30px;
+    font-size: 25px;
     margin: 0px;
     padding: 0px;
 }
@@ -259,9 +265,11 @@ main p {
 color: black;
 }
 .footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: auto;
+    z-index: 4;
+    
 }
 
 .rest-list {
@@ -344,7 +352,7 @@ color: black;
 .ribbon {
     background: var(--primary-color);
     color: #aaa;
-    height: 22em;
+    height: 26em;
 }
 
 /* This is the class used for the footer */
@@ -363,10 +371,27 @@ color: black;
 @media (max-width: 48em) {
 
     /* We increase the body font size */
-    header div, body, main h2, main h3 {
+    header div, body, main h3 {
         font-size: 16px;
     }
+    h2.tag-1.pure-u-2 {
+        font-size: 32px; 
+    }
+    h3.pure-u-1 {
+        font-size: 24px; 
+    }
+    /* main.landing.pure-g {
+        height: 3000px;
 
+    } */
+    main.landing.pure-g {
+        /* overflow: scroll; */
+        position: relative;
+        height: 1200px; 
+    }
+    div.content-wrapper {
+        position: relative;
+    }
     /* We can align the menu header to the left, but float the
     menu items to the right. */
     .home-menu {
@@ -375,6 +400,18 @@ color: black;
         .home-menu ul {
             float: right;
         }
+        img.logo.pure-menu-heading {
+            display: none;
+        }
+        a.pure-menu-title.pure-menu-item.pure-menu-link {
+            width: 100%;
+            text-align: center;
+            margin: 0; 
+            padding: 0;
+        }
+        /* .pure-menu-horizontal {
+            display: none;
+        } */
 
     /* We increase the height of the splash-container */
 /*    .splash-container {
@@ -398,12 +435,53 @@ color: black;
         border: none;
     }
 
+    
+    ul.pure-menu-list {
+        width: 100%;
+        text-align: center;
+        margin: 0; 
+        padding: 0;
+    }
     .ribbon {
         overflow: scroll;
+        padding: 20px;
     }
-
+    /* h2.l-box.pure-u-2.tag2 {
+        margin-top: 80px
+    } */
+    h2.pure-u-2.tag2{
+        margin-top: 80px;
+        font-size: 30px; 
+    }
 }
 
+@media (max-width: 64em) {
+    /* We increase the header font size even more */
+   ul.pure-menu-list {
+        width: 100%;
+        text-align: center;
+        margin: 0; 
+        padding: 0;
+    }
+    .home-menu ul {
+        float: right;
+    }
+    .ribbon {
+        overflow: scroll;
+        padding-right: 20px;
+    }
+    h2.tag1.pure-u-2 {
+        margin-top: 160px;
+        font-size: 30px;
+    }
+    h2.pure-u-2.tag2{
+        margin-top: 160px;
+        font-size: 30px; 
+    }
+    h3.pure-u-1 {
+        font-size: 20px; 
+    }
+  
 /*
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large devices, we want to over-ride some
@@ -415,21 +493,27 @@ color: black;
         font-size: 300%;
     }
 
-    .cycle, .logo {
+    /* .cycle, .logo {
         display: none;
-    }
+    } */
 
     
 }
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
+@media (max-width: 80em) {
+    /* We increase the header font size even more */
+    /* .splash-head {
+        font-size: 300%;
+    } */
+
+    /* .cycle {
+        width: 100%;
+    } */
+
+    /* main.landing.pure-g {
+        overflow: scroll; 
+        position: relative;
+        height: 3000px;  
+    } */
+}
+

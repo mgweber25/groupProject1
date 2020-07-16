@@ -362,6 +362,19 @@ color: black;
     bottom: 0;
     width: 100%;
 }
+div.pure-u-1-1.privacy {
+    margin: 100px;
+    text-align: center;
+}
+
+form#charity-form.pure-form {
+    margin-left: 50px;
+
+}
+form#restaurant-form.pure-form {
+    margin-left: 50px;
+
+}
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
@@ -487,7 +500,10 @@ color: black;
     h3.pure-u-1 {
         font-size: 20px; 
     }
-  
+    div.pure-u-1-2 h2 {
+        font-size: 25px;
+        margin-top: 140px;
+    }
 /*
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large devices, we want to over-ride some

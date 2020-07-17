@@ -202,7 +202,7 @@ header div {
     opacity: 0.5;
 } */
 .layer {
-    background-color: #87c56338;
+    background-color: #edf1eb75;
     height: 120%;
     width: 100%;
 }
@@ -413,6 +413,15 @@ form#restaurant-form.pure-form {
         font-size: 25px;
         margin-top: 140px;
     }
+    .restaurant-page h2{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px; 
+        margin-top: 200px;
+    }
+    .rest-results {
+        margin-top: 200px;
+    }
 /*
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large devices, we want to over-ride some
@@ -438,6 +447,12 @@ form#restaurant-form.pure-form {
     footer {
         font-size: 120%;
         text-align: center;
+    }
+    .restaurant-page h2{
+        margin-top: 200px;
+    }
+    .charity-page h2{
+        margin-top: 200px;
     }
     
 }
@@ -561,4 +576,42 @@ form#restaurant-form.pure-form {
     header a {
         font-size: 13px;
     }
+    .rest-results {
+        margin-top: 10px;
+        margin-left: 44px; 
+        margin-right: 40px;
+        margin-bottom: 100px;
+        color: white;
+    }
+    .pure-form {
+     margin-right: 50px;
+     margin-bottom: 10px;
+    }
+    .restaurant-page h2{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px; 
+        margin-top: 100px;
+    }
+    .charity-page h2{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px; 
+        margin-top: 100px;
+    }
+}
+@media (max-width: 31.5em) {
+    .restaurant-page h2{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px; 
+        margin-top: 165px;
+    }
+    .charity-page h2{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px; 
+        margin-top: 165px;
+    }
+}
 }

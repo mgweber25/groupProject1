@@ -434,6 +434,11 @@ form#restaurant-form.pure-form {
     div.privacy p {
         margin-top: 100px;
     }
+
+    footer {
+        font-size: 120%;
+        text-align: center;
+    }
     
 }
 

@@ -427,7 +427,13 @@ form#restaurant-form.pure-form {
     /* .cycle, .logo {
         display: none;
     } */
-
+    div.pure-u-1-1.privacy {
+        overflow: scroll;
+        height: 600px;
+    }
+    div.privacy p {
+        margin-top: 100px;
+    }
     
 }
 
@@ -478,6 +484,7 @@ form#restaurant-form.pure-form {
         vertical-align: middle;
         height: 200px;
     }
+    
     /* We can align the menu header to the left, but float the
     menu items to the right. */
     .home-menu {

@@ -1,7 +1,7 @@
 # Donation Network
 Group Project 1
 
-## website url 
+## Website url 
 https://mgweber25.github.io/groupProject1/
 
 ## Description

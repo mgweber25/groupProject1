@@ -34,7 +34,7 @@ body {
 .home-menu {
     background: #707070b7;
 }
-.pure-menu.pure-menu-fixed {
+.pure-menu, .pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
     border-bottom: none;
     /* I need a higher z-index here because of the scroll-over effect. */
@@ -44,7 +44,7 @@ body {
 .pure-menu-title {
     color:var(--secondary-color);
     font-weight: 500;
-    font-size: 120%;
+    /* font-size: 120%; */
 }
 .home-menu .pure-menu-heading {
     color: white;
@@ -79,7 +79,7 @@ body {
     width: 75%
 }
 .tag1 {
-
+    text-align: center;
 }
 
 /* header {
@@ -204,6 +204,7 @@ header div {
 .layer {
     background-color: #87c56338;
     height: 120%;
+    width: 100%;
 }
 
 main h2  {
@@ -381,98 +382,6 @@ form#restaurant-form.pure-form {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
-@media (max-width: 48em) {
-
-    /* We increase the body font size */
-    header div, body, main h3 {
-        font-size: 16px;
-    }
-    h2.tag-1.pure-u-2 {
-        font-size: 32px; 
-    }
-    h3.pure-u-1 {
-        font-size: 24px; 
-    }
-    /* main.landing.pure-g {
-        height: 3000px;
-
-    } */
-    main.landing.pure-g {
-        /* overflow: scroll; */
-        position: relative;
-        height: 1200px; 
-    }
-    div.content-wrapper {
-        position: relative;
-    }
-
-    .privacy {
-        margin: 40px 0 0 0;
-        vertical-align: middle;
-        height: 200px;
-    }
-    /* We can align the menu header to the left, but float the
-    menu items to the right. */
-    .home-menu {
-        text-align: left;
-    }
-        .home-menu ul {
-            float: right;
-        }
-        img.logo.pure-menu-heading {
-            display: none;
-        }
-        a.pure-menu-title.pure-menu-item.pure-menu-link {
-            width: 100%;
-            text-align: center;
-            margin: 0; 
-            padding: 0;
-        }
-        /* .pure-menu-horizontal {
-            display: none;
-        } */
-
-    /* We increase the height of the splash-container */
-/*    .splash-container {
-        height: 500px;
-    }*/
-
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
-    /* .landing {
-        width: 50%;
-        height: 50%;
-    }
-
-    .layer {
-        font-size: 250%;
-    } */
-
-
-    /* We remove the border-separator assigned to .l-box-lrg */
-    .l-box-lrg {
-        border: none;
-    }
-
-    
-    ul.pure-menu-list {
-        width: 100%;
-        text-align: center;
-        margin: 0; 
-        padding: 0;
-    }
-    .ribbon {
-        overflow: scroll;
-        padding: 20px;
-    }
-    /* h2.l-box.pure-u-2.tag2 {
-        margin-top: 80px
-    } */
-    h2.pure-u-2.tag2{
-        margin-top: 80px;
-        font-size: 30px; 
-    }
-}
 
 @media (max-width: 64em) {
     /* We increase the header font size even more */
@@ -539,3 +448,105 @@ form#restaurant-form.pure-form {
     } */
 }
 
+@media (max-width: 48em) {
+
+    /* We increase the body font size */
+    header div, body, main h3 {
+        font-size: 16px;
+    }
+    h2.tag-1.pure-u-2 {
+        font-size: 32px; 
+    }
+    h3.pure-u-1 {
+        font-size: 24px; 
+    }
+    /* main.landing.pure-g {
+        height: 3000px;
+
+    } */
+    main.landing.pure-g {
+        /* overflow: scroll; */
+        position: relative;
+        height: 1200px; 
+    }
+    div.content-wrapper {
+        position: relative;
+    }
+
+    .privacy {
+        margin: 40px 0 0 0;
+        vertical-align: middle;
+        height: 200px;
+    }
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+        }
+        img.logo.pure-menu-heading {
+            display: none;
+        }
+        a.pure-menu-title.pure-menu-item.pure-menu-link {
+            width: 100%;
+            text-align: center;
+            margin: 0; 
+            padding: 0;
+        }
+
+        .pure-menu-horizontal {
+            white-space: normal;
+        }
+
+    /* We increase the height of the splash-container */
+/*    .splash-container {
+        height: 500px;
+    }*/
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    /* .landing {
+        width: 50%;
+        height: 50%;
+    }
+
+    .layer {
+        font-size: 250%;
+    } */
+
+
+    /* We remove the border-separator assigned to .l-box-lrg */
+    .l-box-lrg {
+        border: none;
+    }
+
+    
+    ul.pure-menu-list {
+        width: 100%;
+        text-align: center;
+        margin: 0; 
+        padding: 0;
+        
+    }
+    .ribbon {
+        overflow: scroll;
+        padding: 20px;
+    }
+    /* h2.l-box.pure-u-2.tag2 {
+        margin-top: 80px
+    } */
+    h2.pure-u-2.tag2{
+        margin-top: 80px;
+        font-size: 30px; 
+    }
+
+    /* .pure-menu-fixed {
+        position: relative;
+    } */
+
+    header a {
+        font-size: 13px;
+    }
+}
